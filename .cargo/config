@@ -1,11 +1,11 @@
-[target.thumbv6m-none-eabi]
-runner = 'arm-none-eabi-gdb'
-rustflags = [
-  "-C", "link-arg=-Tlink.x",
-  "-C", "linker=arm-none-eabi-ld",
-  "-Z", "linker-flavor=ld",
-  "-Z", "thinlto=no",
-]
-
 [build]
 target = "thumbv6m-none-eabi"
+
+[target.thumbv6m-none-eabi]
+# Useful for `cargo run` automation (optional)
+runner = "arm-none-eabi-gdb -tui -q -x debug.gdb"
+
+# REQUIRED - sets the linker script
+rustflags = [
+    "-C", "link-arg=-Tlink.x",
+]

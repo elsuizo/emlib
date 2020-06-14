@@ -2,14 +2,6 @@
 #![crate_type = "lib"]
 #![crate_name = "emlib"]
 #![allow(warnings)]
-#![feature(no_std)]
-#![feature(core, collections, convert)]
-#![feature(slice_patterns)]
-#![feature(asm)]
-#![feature(naked_functions)]
-#![feature(linkage)]
-#![feature(used)]
-
 #[macro_use]
 
 // emlib bindings
